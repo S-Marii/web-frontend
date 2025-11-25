@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Контакты | Спа</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="assets/js/app.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <img src="assets/img/logo-text.svg" alt="Логотип СПА" width="140" height="44" />
+            <div>
+                <strong class="brand-name">СПА</strong>
+                <p>свяжитесь с нами</p>
+            </div>
+        </div>
+        <nav aria-label="Главное меню">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="stone.html">Аромакамни</a></li>
+                <li><a href="sachet.html">Ароматические саше</a></li>
+                <li><a href="about.html">О нас</a></li>                
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="two-column">
+        <section>
+            <h1>Свяжитесь с нами</h1>
+            <p>Оставьте заявку — ответим в течение рабочего дня и предложим подборку ароматов под ваш сценарий.</p>
+            <form>
+                <label for="fullName">Ваше имя</label>
+                <input type="text" id="fullName" placeholder="Маргарита" required />
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="you@example.com" required />
+
+                <label for="phone">Телефон</label>
+                <input type="tel" id="phone" placeholder="+7 (999) 000-00-00" pattern="\+?[0-9\s\-()]{7,}" />
+
+                <label for="deliveryDate">Желаемая дата доставки</label>
+                <input type="date" id="deliveryDate" />
+
+                <label for="quantity">Количество изделий</label>
+                <input type="number" id="quantity" min="1" max="30" value="3" />
+
+                <label for="aroma">Предпочитаемый аромат</label>
+                <input type="search" id="aroma" list="aromaOptions" placeholder="Лаванда, Мята..." />
+                <datalist id="aromaOptions">
+                    <option value="Лаванда крымская"></option>
+                    <option value="Мята перечная"></option>
+                    <option value="Апельсин + корица"></option>
+                    <option value="Синие пионы"></option>
+                </datalist>
+
+                <label for="colorPicker">Цвет упаковки</label>
+                <input type="color" id="colorPicker" value="#f0c0d0" />
+
+                <label for="intensityRange">Интенсивность аромата: <span id="intensityValue"></span></label>
+                <input type="range" id="intensityRange" min="10" max="100" value="60" />
+
+                <label for="moodBoard">Приложите эскиз или вдохновение (jpg, png)</label>
+                <input type="file" id="moodBoard" accept="image/*" />
+                <div id="moodPreview" class="file-preview" aria-live="polite"></div>
+
+                <label for="message">Комментарий</label>
+                <textarea id="message" rows="5" placeholder="Расскажите, для какого пространства или события нужен аромат."></textarea>
+
+                <button class="cta-button" type="submit">Отправить заявку</button>
+            </form>
+        </section>
+
+        <aside aria-label="Контакты">
+            <h2>Контакты</h2>
+            <p>г.Санкт-Петербург</p>          
+            <p><a href="mailto:lunastavtseva@gmail.com">lunastavtseva@gmail.com</a></p>
+
+            <div class="social-links">
+                <a class="social-link" href="https://vk.com/sachetspa?from=groups" target="_blank" rel="noopener noreferrer">VK</a>
+                <a class="social-link" href="https://t.me/sachetspa" target="_blank" rel="noopener noreferrer">Telegram</a>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>© 2025 Спа. Мы рядом, где бы вы ни находились.</p>
+    </footer>
+</body>
+
+</html>
+
